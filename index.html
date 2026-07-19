@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BombGoBoom // BO2 Plutonium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="scanlines" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#home">
+      <span class="brand-mark">◈</span>
+      <span class="brand-name">BOMBGOBOOM</span>
+    </a>
+    <nav class="tabs" role="tablist" aria-label="Site sections">
+      <button class="tab-btn is-active" data-tab="home" role="tab" aria-selected="true">HOME</button>
+      <button class="tab-btn" data-tab="stats" role="tab" aria-selected="false">STATS</button>
+      <button class="tab-btn" data-tab="demos" role="tab" aria-selected="false">DEMOS</button>
+      <button class="tab-btn" data-tab="links" role="tab" aria-selected="false">LINKS</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="panel is-active" role="tabpanel">
+    <div class="hero">
+      <div class="hero-frame">
+        <span class="corner tl"></span><span class="corner tr"></span>
+        <span class="corner bl"></span><span class="corner br"></span>
+        <p class="eyebrow">BO2 // PLUTONIUM CLIENT // SEARCH &amp; DESTROY</p>
+        <h1 class="hero-title">BOMBGOBOOM</h1>
+        <p class="hero-sub">Black Ops 2 on Plutonium. Site plants, clean rotations, and clips worth rewatching.</p>
+        <div class="hero-actions">
+          <a href="#stats" class="btn btn-primary" data-tab-link="stats">VIEW STATS</a>
+          <a href="#demos" class="btn btn-ghost" data-tab-link="demos">BROWSE DEMOS</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>ACE_CLUTCH_1v4</span><span>QUICKSCOPE_LONG</span><span>PLANT_DENIED</span>
+        <span>NO_SCOPE_RETAKE</span><span>FLANK_WIN</span><span>SND_MATCH_POINT</span>
+        <span>ACE_CLUTCH_1v4</span><span>QUICKSCOPE_LONG</span><span>PLANT_DENIED</span>
+        <span>NO_SCOPE_RETAKE</span><span>FLANK_WIN</span><span>SND_MATCH_POINT</span>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="hud-card">
+        <span class="corner tl"></span><span class="corner br"></span>
+        <h3>What is Plutonium?</h3>
+        <p>Plutonium is a third-party client that brings Black Ops 2's multiplayer, zombies, and dedicated servers back online with custom content and community-run matchmaking.</p>
+      </div>
+      <div class="hud-card">
+        <span class="corner tl"></span><span class="corner br"></span>
+        <h3>Focus: Search &amp; Destroy</h3>
+        <p>One life, one round, one plant. This channel runs on SnD — reads, rotations, and clutches over anything else the playlist offers.</p>
+      </div>
+      <div class="hud-card">
+        <span class="corner tl"></span><span class="corner br"></span>
+        <h3>Nightly Sessions</h3>
+        <p>No Sleep SnD runs most nights at 8PM EST. Pull up, drop in, and see what makes the highlight reel.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats" class="panel" role="tabpanel">
+    <div class="section-head">
+      <p class="eyebrow">MISSION DATA</p>
+      <h2>Stats</h2>
+      <p class="section-desc">Season snapshot — edit the numbers in <code>js/script.js</code> (the <code>statData</code> object) to keep this current.</p>
+    </div>
+
+    <div class="stat-grid" id="statSummary"></div>
+
+    <div class="table-wrap">
+      <table class="stat-table" id="weaponTable">
+        <thead>
+          <tr>
+            <th>Weapon</th>
+            <th>Kills</th>
+            <th>K/D</th>
+            <th>Accuracy</th>
+            <th>Headshots</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table class="stat-table" id="matchTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Map</th>
+            <th>Result</th>
+            <th>Score</th>
+            <th>K/D</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- DEMOS -->
+  <section id="demos" class="panel" role="tabpanel">
+    <div class="section-head">
+      <p class="eyebrow">RECORDED FOOTAGE</p>
+      <h2>Demos</h2>
+      <p class="section-desc">Plutonium records matches as <code>.dem</code> files for in-client playback. Add entries in the <code>demoData</code> array in <code>js/script.js</code> and link each to a hosted download (Google Drive, Discord, or a GitHub Release attached to this repo).</p>
+    </div>
+
+    <div class="demo-grid" id="demoGrid"></div>
+
+    <div class="hud-card note-card">
+      <span class="corner tl"></span><span class="corner br"></span>
+      <h3>Where demo files live</h3>
+      <p>BO2 Plutonium demos are stored locally at <code>Documents/Plutonium/storage/t6/demos/</code>. Rename a file before uploading it so its title matches the card you create here — that keeps the download link and the listing in sync.</p>
+    </div>
+  </section>
+
+  <!-- LINKS -->
+  <section id="links" class="panel" role="tabpanel">
+    <div class="section-head">
+      <p class="eyebrow">RALLY POINTS</p>
+      <h2>Links</h2>
+      <p class="section-desc">Where to catch the channel and the community.</p>
+    </div>
+
+    <div class="link-grid">
+      <a class="hud-card link-card" href="#" target="_blank" rel="noopener">
+        <span class="corner tl"></span><span class="corner br"></span>
+        <span class="link-tag">YOUTUBE</span>
+        <h3>BombGoBoom</h3>
+        <p>BO2 Plutonium gameplay, SnD clips, and channel updates.</p>
+      </a>
+      <a class="hud-card link-card" href="#" target="_blank" rel="noopener">
+        <span class="corner tl"></span><span class="corner br"></span>
+        <span class="link-tag">DISCORD</span>
+        <h3>No Sleep SnD</h3>
+        <p>Nightly lobbies, clip submissions, and match scheduling.</p>
+      </a>
+      <a class="hud-card link-card" href="#" target="_blank" rel="noopener">
+        <span class="corner tl"></span><span class="corner br"></span>
+        <span class="link-tag">PLUTONIUM</span>
+        <h3>Get the Client</h3>
+        <p>Official download and setup instructions for BO2 Plutonium.</p>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>BOMBGOBOOM // BUILT FOR BO2 PLUTONIUM // NOT AFFILIATED WITH ACTIVISION</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
