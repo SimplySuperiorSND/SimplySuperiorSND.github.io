@@ -317,6 +317,24 @@ main{ max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; }
 .stat-table td.win{ color: #6fd8ff; }
 .stat-table td.loss{ color: var(--text-faint); }
 
+.status-badge{
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border: 1px solid currentColor;
+  text-transform: uppercase;
+}
+.status-badge.perm{ color: var(--blue-bright); }
+.status-badge.temp{ color: var(--text-muted); }
+
+.stat-table td.evidence a{
+  color: var(--blue);
+  border-bottom: 1px solid transparent;
+}
+.stat-table td.evidence a:hover{ color: var(--blue-bright); border-color: var(--blue-bright); }
+
 /* ===== Demos ===== */
 .demo-grid{
   display: grid;

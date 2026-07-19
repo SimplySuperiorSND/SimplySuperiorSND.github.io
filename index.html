@@ -23,6 +23,7 @@
       <button class="tab-btn is-active" data-tab="home" role="tab" aria-selected="true">HOME</button>
       <button class="tab-btn" data-tab="stats" role="tab" aria-selected="false">STATS</button>
       <button class="tab-btn" data-tab="demos" role="tab" aria-selected="false">DEMOS</button>
+      <button class="tab-btn" data-tab="banned" role="tab" aria-selected="false">BANNED</button>
       <button class="tab-btn" data-tab="links" role="tab" aria-selected="false">LINKS</button>
     </nav>
   </div>
@@ -129,6 +130,36 @@
       <span class="corner tl"></span><span class="corner br"></span>
       <h3>Where demo files live</h3>
       <p>BO2 Plutonium demos are stored locally at <code>Documents/Plutonium/storage/t6/demos/</code>. Rename a file before uploading it so its title matches the card you create here — that keeps the download link and the listing in sync.</p>
+    </div>
+  </section>
+
+  <!-- BANNED -->
+  <section id="banned" class="panel" role="tabpanel">
+    <div class="section-head">
+      <p class="eyebrow">SERVER BLACKLIST</p>
+      <h2>Banned</h2>
+      <p class="section-desc">Players removed from lobbies/servers, and why. Add entries in the <code>bannedData</code> array in <code>js/script.js</code>. Keep proof (clip, screenshot) linked before publishing a name here.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="stat-table" id="bannedTable">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Reason</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Evidence</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="hud-card note-card">
+      <span class="corner tl"></span><span class="corner br"></span>
+      <h3>Appeals</h3>
+      <p>Think a ban was a mistake? Reach out through the Discord in the Links tab with your in-game name and the date — appeals are reviewed there, not here.</p>
     </div>
   </section>
 

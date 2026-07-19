@@ -128,5 +128,50 @@ function renderDemos(){
   `).join('');
 }
 
+/* =========================================================
+   BANNED DATA — edit these to list players removed from
+   your lobbies/servers. Keep evidence linked before publishing.
+   ========================================================= */
+const bannedData = [
+  {
+    player: 'xXExampleXx',
+    reason: 'Aimbot / wallhack',
+    date: '2026-07-10',
+    status: 'perm', // 'perm' or 'temp'
+    statusLabel: 'Permanent',
+    evidenceUrl: '#'
+  },
+  {
+    player: 'SampleUser22',
+    reason: 'Repeated teamkilling',
+    date: '2026-07-05',
+    status: 'temp',
+    statusLabel: '7-Day',
+    evidenceUrl: '#'
+  },
+  {
+    player: 'PlaceholderName',
+    reason: 'Toxic voice chat / harassment',
+    date: '2026-06-29',
+    status: 'perm',
+    statusLabel: 'Permanent',
+    evidenceUrl: '#'
+  },
+];
+
+function renderBanned(){
+  const body = document.querySelector('#bannedTable tbody');
+  body.innerHTML = bannedData.map(b => `
+    <tr>
+      <td>${b.player}</td>
+      <td>${b.reason}</td>
+      <td>${b.date}</td>
+      <td><span class="status-badge ${b.status}">${b.statusLabel}</span></td>
+      <td class="evidence">${b.evidenceUrl && b.evidenceUrl !== '#' ? `<a href="${b.evidenceUrl}" target="_blank" rel="noopener">View →</a>` : '—'}</td>
+    </tr>
+  `).join('');
+}
+
 renderStats();
 renderDemos();
+renderBanned();
